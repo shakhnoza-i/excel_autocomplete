@@ -13,7 +13,8 @@ def open_excelsheet():
 
 def autocomplete(row):
     sheet = open_excelsheet()
-    client = sheet[row][0].value #индекс столбца зависит от номера столбца файла из которого нужно считать данные
+    # индекс столбца зависит от номера столбца файла из которого нужно считать данные
+    client = sheet[row][0].value
     name = sheet[row][4].value
     unit = sheet[row][5].value
     count = sheet[row][6].value
@@ -24,7 +25,7 @@ def autocomplete(row):
     sumn = count*price
     sump = num2words(sumn, lang='ru')
 
-    wb = load_workbook('contracts/template.xlsx')
+    wb = load_workbook('template.xlsx')
     ws = wb.active 
     ws['L19'] = client
     ws['C24'] = name
