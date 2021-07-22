@@ -20,7 +20,7 @@ def autocomplete(row):
     count = sheet[row][6].value
     price = sheet[row][7].value
     nakl = sheet[row][9].value
-    data = sheet[row][15].value
+    data = sheet[row][10].value
     countp = num2words(count, lang='ru')
     sumn = count*price
     sump = num2words(sumn, lang='ru')
@@ -44,6 +44,6 @@ def autocomplete(row):
     return(s)
     
 
-for i in range(10,12):
+for i in range(1,18):
     autocomplete(i)
  
