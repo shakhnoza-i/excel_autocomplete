@@ -25,7 +25,7 @@ def autocomplete(row):
     sumn = count*price
     sump = num2words(sumn, lang='ru')
 
-    wb = load_workbook('template.xlsx')
+    wb = load_workbook('template1.xlsx')
     ws = wb.active 
     ws['L19'] = client
     ws['C24'] = name
@@ -44,6 +44,6 @@ def autocomplete(row):
     return(s)
     
 
-for i in range(1,18):
+for i in range(60,75):
     autocomplete(i)
  
